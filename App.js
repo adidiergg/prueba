@@ -8,6 +8,7 @@
 
 import React from 'react';
 import type {Node} from 'react';
+
 import {
   SafeAreaView,
   ScrollView,
@@ -17,6 +18,8 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+
+import LOGIN from "./Menu";
 
 import {
   Colors,
@@ -60,19 +63,15 @@ const App: () => Node = () => {
   };
 
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <Text style={styles.texto}>Arriba el atlas</Text>
-    </SafeAreaView>
+    <LOGIN />
   );
 };
 
 const styles = StyleSheet.create({
   texto:{
     fontSize:50,
-    color:'red',
+    color:"red",
     textAlign:'center'
-
-
   },
   sectionContainer: {
     marginTop: 32,
