@@ -8,6 +8,10 @@ export default class Pantallab extends Component {
     };
   }
 
+  
+
+  
+
   render() {
     return (
       <View>
