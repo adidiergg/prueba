@@ -33,7 +33,11 @@ export default class Login extends Component {
               if ( autentificacion==='0'){
                 alert('No es un usuario reconocido');
               }else{
-                navigation.navigate("pantalla2");
+                var recibe = xhttp.responseText;
+                var datos = recibe.split(",");
+                console.log(datos[2]);
+                navigation.navigate("pantalla2",{nombre:datos[2]});
+
               }
 
               

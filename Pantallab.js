@@ -15,7 +15,7 @@ export default class Pantallab extends Component {
   render() {
     return (
       <View>
-        <Text> Pantallab </Text>
+        <Text> Bienvenido {this.props.route.params.nombre}</Text>
       </View>
     );
   }
