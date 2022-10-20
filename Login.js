@@ -36,7 +36,7 @@ export default class Login extends Component {
                 var recibe = xhttp.responseText;
                 var datos = recibe.split(",");
                 console.log(datos[2]);
-                navigation.navigate("pantalla2",{nombre:datos[2]});
+                navigation.navigate("acciones",{nombre:datos[2],codigo:datos[1]});
 
               }
 
@@ -52,17 +52,17 @@ export default class Login extends Component {
 
     return (
       <View>
-          
+        <View>
         <Text style={styles.textoudeg}  > UdeG </Text>
         
-        <Image style={styles.logoudg} source={require("./Imagenes/logoudg.png")}></Image>
-        
-        <TextInput style={styles.input}
+        <Image  style={styles.logoudg} source={require("./Imagenes/logoudg.png")}></Image>
+        </View>
+        <TextInput  style={styles.input}
         placeholder="Codigo"
         onChangeText={codigo => this.setState({codigo})}
         ></TextInput>
 
-        <TextInput style={styles.input} secureTextEntry={true}
+        <TextInput  style={styles.input} secureTextEntry={true}
         placeholder="NIP"
         onChangeText={nip => this.setState({nip})}
         ></TextInput>
@@ -82,10 +82,12 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
     
     btn:{
-      width:100,
-      height:80,
+      //width:100,
+      //height:150,
       marginTop:20,
-      margin:150
+      marginHorizontal:5,
+      
+      //margin:150
     },
     textoudeg:{
         fontSize:30,
@@ -93,10 +95,12 @@ const styles = StyleSheet.create({
         textAlign:"center",
     },
     logoudg:{
-        height:200,
-        width:100,
-        marginLeft:150,
+        height:250,
+        width:150,
+        
+        //marginLeft:150,
         resizeMode:"contain",
+        alignSelf:'center',
         
         
     },
@@ -106,9 +110,13 @@ const styles = StyleSheet.create({
         marginTop:20,
         marginLeft:5,
         marginRight:5,
+        borderColor: "gray",
+        borderRadius: 10,
         
     },
   });
+
+ 
 
   /*
   Tarea: AJUSTAR EL CODIGO DEL BOTON PARA QUE CUANDO PONGAN LAS CREDENCIALES 
