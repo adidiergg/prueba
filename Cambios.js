@@ -119,7 +119,7 @@ export default class Cambios extends Component {
 
     return (
       <View style={styles.container}>
-        <Text> Seleccionar usuario que desea eliminar: </Text>
+        <Text> Seleccionar usuario que desea actualizar: </Text>
             <DropDownPicker style={styles.select} open={open} 
                 value={value}
                 items={items} 
