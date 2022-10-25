@@ -18,7 +18,7 @@ export default class Acciones extends Component {
         </View>
         <Button style={styles.btn} title='Bajas' onPress={() => this.props.navigation.navigate("bajas") }> </Button>
         
-        <Button style={styles.btn} title='Cambios'> </Button>
+        <Button style={styles.btn} title='Cambios' onPress={() => this.props.navigation.navigate("cambios") }> </Button>
         <Button style={styles.btn} title='Listas' onPress={() => this.props.navigation.navigate("pantalla2",{nombre:this.props.route.params.nombre,codigo:this.props.route.params.codigo})}> </Button>
         
       </View>
