@@ -2,7 +2,7 @@
 
 
 import React, { Component } from 'react';
-import { View, Text ,StyleSheet,Image, TextInput, Button} from 'react-native';
+import { View, Text ,TouchableOpacity ,StyleSheet,Image, TextInput, Button} from 'react-native';
 
 export default class Login extends Component {
   constructor(props) {
@@ -68,8 +68,11 @@ export default class Login extends Component {
         ></TextInput>
 
       <View  style={styles.btn} >
-      <Button title="Entrar" onPress={btnClick}></Button>
+        <TouchableOpacity style={styles.buttonContainer} activeOpacity={0.8} onPress={btnClick}>
+            <Text style={styles.buttonText}>Entrar</Text>
+        </TouchableOpacity>
       </View>
+      
 
         
 
@@ -80,6 +83,21 @@ export default class Login extends Component {
 
 //declaracion de los estilos de los objetos
 const styles = StyleSheet.create({
+  buttonContainer: {
+    marginTop:10,
+    elevation: 8,
+    backgroundColor: "#B12028",
+    borderRadius: 10,
+    paddingVertical: 10,
+    paddingHorizontal: 12
+  },
+  buttonText: {
+    fontSize: 18,
+    color: "#fff",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textTransform: "uppercase"
+  },
     
     btn:{
       //width:100,

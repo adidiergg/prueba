@@ -96,6 +96,10 @@ export default class Cambios extends Component {
     const { open, value, items } = this.state;
 
     const Actualizar =() => {
+      if (this.state.value===null){
+        Alert.alert("Campo vacío","Es necesario seleccionar un código");
+        return;
+      }
       let _this = this;
       var xhttp = new XMLHttpRequest();
       xhttp.onreadystatechange = function() {
